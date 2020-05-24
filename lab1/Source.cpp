@@ -27,10 +27,6 @@ void output_read(reader read) {
 	cout << "Return date: " << read.y_of_d << endl << endl;
 }
 
-
-void find(reader* read, int read_num);
-
-
 int main() {
 	int a;
 	setlocale(LC_ALL, "russian");
