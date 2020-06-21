@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<string>
 #include<fstream>
 #include<vector>
@@ -51,6 +51,7 @@ int main()
 							b = true;
 						}
 					}
+
 					if (v[i * 2 + 2 + sh] < v[i * 2 + 1 + sh])
 					{
 						iswap(v[i * 2 + 1 + sh], v[i * 2 + 2 + sh]);
@@ -68,10 +69,9 @@ int main()
 			}
 			if (!b)
 				++sh;
-		}
-		while (sh + 2 < v.size());
+		} while (sh + 2 < v.size());
 
-		cout << "\n\nДанные после сортировки ";
+		cout << "\nДанные после сортировки ";
 		for (int i = 0; i < v.size(); i++)
 			cout << v[i] << ' ';
 
@@ -81,7 +81,7 @@ int main()
 		if (!fileOut.is_open())
 			cout << "error";
 		else
-			fileOut << "\nДанные после сортировки ";
+			fileOut << "Данные после сортировки ";
 		for (int i = 0; i < v.size(); i++)
 			fileOut << v[i] << " ";
 		fileOut.close();
@@ -89,7 +89,6 @@ int main()
 	fileIn.close();
 	return 0;
 }
-
 void iswap(char& n1, char& n2)
 {
 	char temp = n1;
